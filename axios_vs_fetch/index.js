@@ -1,5 +1,6 @@
 const axios = require("axios")
 
+//NOTE : you can test it with your own api also
 //1. fetch
 //how to send fetch request
 function main_1(){
@@ -48,7 +49,7 @@ async function main_5() {
 }
 
 //post with data and authorization
-
+//get your url at httpdump for testing
 async function main_6(){
     const response = await axios.post("https://httpdump.app/dumps/461736d3-f323-4d29-8064-bb2f14b3ada9",{
         username:"mallua",
@@ -62,7 +63,7 @@ async function main_6(){
     console.log(response.data)
 }
 
-// while sending the get don't send the body just the header only see below
+// while sending the get don't send the body just the header only after the URL see below
 
 async function main_7(){
     const response = await axios.get("https://httpdump.app/dumps/461736d3-f323-4d29-8064-bb2f14b3ada9",{
