@@ -47,4 +47,31 @@ async function main_5() {
     console.log(response.data)
 }
 
-main_5()
+//post with data and authorization
+
+async function main_6(){
+    const response = await axios.post("https://httpdump.app/dumps/461736d3-f323-4d29-8064-bb2f14b3ada9",{
+        username:"mallua",
+        lastname:"saddam"
+    },{
+        headers:{
+            Authorization:"bearer 123"
+        }
+    })
+
+    console.log(response.data)
+}
+
+// while sending the get don't send the body just the header only see below
+
+async function main_7(){
+    const response = await axios.get("https://httpdump.app/dumps/461736d3-f323-4d29-8064-bb2f14b3ada9",{
+        headers:{
+            Authorization:"bearer 123"
+        }
+    })
+
+    console.log(response.data)
+}
+
+main_7()
